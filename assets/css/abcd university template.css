@@ -1149,7 +1149,7 @@ button::-moz-focus-inner {
   top: 1px;
 }
 
-.mfp-close-btn-in .mfp-close {
+.mfp-closebutton-in .mfp-close {
   color: #333;
 }
 
@@ -2027,4 +2027,8 @@ h2 {
 
 .a{
   color: #05a548;
+}
+
+button{
+  /* background-color: #03873a; */
 }
