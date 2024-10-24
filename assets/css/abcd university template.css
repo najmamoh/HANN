@@ -1954,6 +1954,10 @@ width: 50%;
   background: url(../images//main-slider-01.jpg) no-repeat center center/cover;
 width: 100%;}
 
+.section6{
+  background-image: url(../images/video-bg.jpg);
+
+}
 .background-overlay::after {
   content: '';
   position: absolute;
