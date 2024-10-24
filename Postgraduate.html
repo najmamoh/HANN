@@ -239,6 +239,23 @@
         
     </style>
 </head>
+<script>
+     const products = [
+           { id: 1,  type: "Pipes" },
+           { id: 2,  type: "Pipes"},
+           { id: 3,  type: "Pipes"},
+           { id: 4,  type: "Pipes" },
+
+           { id: 5,  type: "Pipes" },
+           { id: 6,  type: "Pipes"},
+           { id: 7,  type: "Pipes"},
+           { id: 8 , type: "Pipes" },
+           { id: 9 , type: "Pipes" },
+           { id: 10 , type: "Pipes" },
+
+]
+           
+</script>
 <body>
     
     <header>
@@ -246,8 +263,8 @@
     </header>
     
     <div class="container">
-        <div class="tab-container">
-            <button class="tab active" onclick="openTab(event, 'general-psychology')">General Psychology</button>
+        <!-- <div class="tab-container">
+            <button class="tab active" onclick="openTab(event, 'general-psychology')" type="general-psychology">General Psychology</button>
             <button class="tab" onclick="openTab(event, 'research-methodology')">Research Methodology</button>
             <button class="tab" onclick="openTab(event, 'social-behavioural-change')">Social & Behavioural Change</button>
             <button class="tab" onclick="openTab(event, 'digital-journalism')">Digital Journalism</button>
@@ -257,9 +274,9 @@
             <button class="tab" onclick="openTab(event, 'child-protection')">Child Protection</button>
             <button class="tab" onclick="openTab(event, 'university-admin')">University Administration</button>
             <button class="tab" onclick="openTab(event, 'counseling-psychology')">Counseling Psychology</button>
-        </div>
+        </div> -->
 
-        <div id="general-psychology" class="tab-content active ">
+        <div id="general-psychology" class="tab-content  "type="general-psychology">
             <section class="section ">
                 <div class="section2">
                 <h2>Postgraduate Diploma in General Psychology</h2>
@@ -345,7 +362,7 @@
 
         <!-- Add similar structures for other programs -->
 
-        <div id="research-methodology" class="tab-content ">
+        <div id="research-methodology" class="tab-content " type="research-methodology">
             <section class="section">
                 <div class="section2">
 
@@ -428,7 +445,7 @@
 
 
 
-        <div id="social-behavioural-change" class="tab-content ">
+        <div id="social-behavioural-change" class="tab-content " type="social-behavioural-change">
             <section class="section">
                 <div class="section2">
 
@@ -532,12 +549,12 @@
 
 
 
-        <div id="digital-journalism" class="tab-content ">
+        <div id="digital-journalism" class="tab-content " type="digital-journalism">
             <section class="section">
                 <div class="section2">
 
-                <h2>Postgraduate Diploma in Social and Behavioural Change
-
+                <h2>
+                    Postgraduate Certificate in Digital Journalism and Mass-Communication
                 </h2>
                 <h3>Introduction</h3>
                 <p>
@@ -545,7 +562,10 @@
                 </p>
                 
                 <h3>Programme Justification</h3>
-               
+                <p>
+                    The Postgraduate Certificate in Digital Journalism and Mass Communication addresses the urgent need for skilled professionals in an increasingly digital media landscape. As traditional journalism evolves, this program equips students with vital competencies in multimedia storytelling, social media strategies, and digital content creation. It fosters critical thinking and ethical practices essential for responsible reporting. By blending theoretical insights with practical applications, the certificate prepares graduates for diverse roles in journalism, public relations, and digital communication. This program not only enhances career prospects but also empowers participants to navigate the complexities of modern media effectively, making it a crucial addition to any professional's skill set.
+                </p>
+                               
                 
                 <h3>Programme Objectives</h3>
                 <p>The general objectives of a Diploma in Social and Behavioral Change typically encompass a broad range of goals aimed at fostering an understanding of human behavior and effective strategies for driving positive change. Here are some key general objectives:</p>
@@ -633,7 +653,7 @@
 
 
 
-        <div id="grant-proposal" class="tab-content">
+        <div id="grant-proposal" class="tab-content" type="grant-proposal">
             <section class="section">
                 <div class="section2">
 
@@ -764,7 +784,7 @@
         
 
 
-        <div id="english-writing" class="tab-content">
+        <div id="english-writing" class="tab-content" type="english-writing">
             <section class="section">
                 <div class="section2">
         
@@ -888,10 +908,7 @@
         </div>
 
 
-
-
-
-        <div id="peace-conflict-studies" class="tab-content">
+        <div id="peace-conflict-studies" class="tab-content" type="peace-conflict-studies">
             <section class="section">
                 <div class="section2">
         
@@ -1113,7 +1130,7 @@
         
 
 
-        <div id="child-protection" class="tab-content">
+        <div id="child-protection" class="tab-content" type="child-protection">
                 <div class="section2">
         
                     <h1>Master of Child Protection and Development</h1>
@@ -1337,7 +1354,7 @@
 
            
 
-            <div id="university-admin" class="tab-content">
+            <div id="university-admin" class="tab-content" type="university-admin">
                 <div class="section2">
         
                     <h1>Postgraduate Diploma in University Administration and Leadership</h1>
@@ -1589,7 +1606,7 @@
 </div>
 
 
-            <div id="counseling-psychology" class="tab-content">
+            <div id="counseling-psychology" class="tab-content " type="counseling-psychology">
                 <div class="section2">
         
                         <h1>Master in Counseling Psychology</h1>
@@ -1770,19 +1787,36 @@
     </div>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabContent, tabLinks;
-            tabContent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabContent.length; i++) {
-                tabContent[i].style.display = "none";
-            }
-            tabLinks = document.getElementsByClassName("tab");
-            for (i = 0; i < tabLinks.length; i++) {
-                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+        // Function to get the query parameter (course name)
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
         }
+
+        // Hide all course sections initially
+        function hideAllCourses() {
+            const courses = document.querySelectorAll('.course-section');
+            courses.forEach(course => course.style.display = 'none');
+        }
+
+        // Show only the active course based on the query parameter
+        function showActiveCourse(course) {
+            const activeCourse = document.getElementById(course);
+            if (activeCourse) {
+                activeCourse.style.display = 'block';
+            } else {
+                document.getElementById('course-content').innerHTML = '<p>Course details not available.</p>';
+            }
+        }
+
+        // On page load, get the course query param and display the correct content
+        document.addEventListener('DOMContentLoaded', function() {
+            const course = getQueryParam('type');
+            hideAllCourses();
+            if (course) {
+                showActiveCourse(course);
+            }
+        });
     </script>
 </body>
 </html>
