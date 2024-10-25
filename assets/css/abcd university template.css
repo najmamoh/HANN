@@ -1916,7 +1916,7 @@ button {
   transition: background-color 0.3s ease;
 }
 .postgraduate-programs  li{
-  list-style-type: circle;
+  list-style-type:decimal;
 }
 
 button:hover {
