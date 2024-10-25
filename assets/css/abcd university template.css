@@ -1863,170 +1863,80 @@ h2.h2{
 .admission-section2 {
   background: url(../images/main-slider-03.jpg) no-repeat center center/cover;
   padding: 60px;
-  /* border-radius: 20px; */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  /* display: flex; */
-  align-items: center;
-  justify-content: space-between;
-  /* background-image: url(../images/coming-soon-bg.jpg); */
-
   background-color: #172238;
-  /* padding: 120px 0px; */
- 
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  text-align: center; */
+  margin-top: 5rem;
 }
 
 .admission-requirements, .undergraduate-programs, .postgraduate-programs {
   padding: 40px;
   border-radius: 15px;
-  margin-bottom: 40px;
   background: rgba(158, 208, 239, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
 }
-
-.admission-requirements h2, .undergraduate-programs h2, .postgraduate-programs h2 {
-  font-size: 36px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-weight: 700;
+.postgraduate-programs p{
+  width: 50%;
+}
+h2, h3 {
+  color: #04a848;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .admission-requirements ul, .undergraduate-programs ul, .postgraduate-programs ul {
-  font-size: 18px;
+  font-size: 15px;
   color: #e0e0e0;
-  list-style: disc;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 .program-categories2 {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .program-category {
   flex: 1;
+  min-width: 300px;
 }
 
-.program-category h3 {
-  font-size: 28px;
-  color: #ffffff;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.program-category ul {
-  font-size: 16px;
-  color: #d0d0d0;
-  line-height: 1.6;
-}
-.admission-section2 h2{
-  color: #03ac4a;
-  font-weight: 900;
-}
-.undergraduate-programs p{
-  width: 50%;
-  font-size: 15px;
-}
-.postgraduate-programs p{
-  width: 50%;
-  font-size: 15px;
-}
-
-
-/* ----Research */
-.research-section {
-  position: relative;
-  padding: 40px 0;
+button {
+  background-color: var(--secondary-color);
   color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.postgraduate-programs  li{
+  list-style-type: circle;
 }
 
-.background-overlay {
-  background: url(../images//main-slider-01.jpg) no-repeat center center/cover;
-  position: relative;
-  padding: 40px 0;
-  overflow: hidden;
+button:hover {
+  background-color: #03873a;
 }
-.section2{
-  background: url(../images//main-slider-01.jpg) no-repeat center center/cover;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container, .program-categories2, .admission-section2 {
+    padding: 15px;
+    /* text-align: center; */
+  }
+  .postgraduate-programs p{
 width: 100%;
-}
+  }
+  .admission-requirements, .undergraduate-programs, .postgraduate-programs {
+    padding: 20px;
+    width: 100%;
+  }
 
-.section6{
-  background-image: url(../images/video-bg.jpg);
-
-}
-.background-overlay::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(12, 34, 82, 0.5); /* Adjust opacity as needed */
-  
-}
-
-.content-container {
-  position: relative;
-  z-index: 1;
-  width: 80%;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.research-info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.2); /* Light background for readability */
-  padding: 20px;
-  border-radius: 10px;
-}
-.info-item i {
-  font-size: 50px;
-  color: #ffffff;
-}
-
-.info-text {
-  flex: 1;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 1.8em;
-}
-
-.info-link {
-  display: inline-block;
-  margin-top: 10px;
-  color: #172238;
-  text-decoration: none;
-}
-
-.info-link:hover {
-  text-decoration: underline;
-}
-
-.admission-requirements{
-  margin-top: 30px;
-}
-
-.a{
-  color: #05a548;
-}
-
-button{
-  /* background-color: #03873a; */
+  h2, h3 {
+    font-size: 1.5em;
+  }
 }
