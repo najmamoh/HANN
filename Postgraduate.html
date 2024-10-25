@@ -26,236 +26,224 @@
         <link rel="stylesheet" href="assets/css/lightbox.css" />
       </head>
     <style>
-        :root {
-            --primary-color: #3a506b;
-            --secondary-color: #059a43;
-            --text-color: #0b132b;
-            --background-color: #062c4a;
-            --accent-color: #058f3e;
-        }
-        
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                60deg,
-                var(--secondary-color),
-                var(--secondary-color) 10px,
-                var(--primary-color) 10px,
-                var(--primary-color) 20px
-            );
-            animation: moveStripes 20s linear infinite;
-            opacity: 0.1;
-        }
-        
-        @keyframes moveStripes {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            position: relative;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-        
-        h2:hover {
-            color: var(--secondary-color);
-        }
-        
-        .section {
-            
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section2{
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .section2 h3,h2{
-            color: #05a548;
-        }
-        .section p ,li{
-            width: 60%;
-        }
-        .section2 p ,li{
-            width: 60%;
-        }
-        ul li{
-            list-style-type:circle;
-
-        }
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-            transition: background-color 0.3s ease;
-        }
-        
-        th {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-            color: black;
-        }
-        
-        tr:hover {
-            background-color: var(--accent-color);
-        }
-        
-        .info-box {
-            background-color: var( --background-color);
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .info-box:hover {
-            transform: scale(1.02);
-        }
-        
-        .tab-container {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .tab {
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin: 5px;
-        }
-        
-        .tab:hover, .tab.active {
-            background-color: var(--secondary-color);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        @media (max-width: 768px) {
-    .section p,
-    .section li,
-    .section2 p,
-    .section2 li {
-        width: 100%; /* Set to full width */
-        padding-left: 50px;
-        padding-right: 50px;
-
-    }
-    .section2{
-        padding: 0px;
-
-  }
-   h2,header{
-    padding-left: 50px;
-        padding-right: 50px;
-   }
+       /* Base styles */
+:root {
+    --primary-color: #3a506b;
+    --secondary-color: #059a43;
+    --text-color: #0b132b;
+    --background-color: #062c4a;
+    --accent-color: #058f3e;
 }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 50px;
-                width: 100%;
-            }
-           
-            h1 {
-                font-size: 2em;
-            }
-            
-            table, th, td {
-                font-size: 14px;
-            }
-            
-            .tab-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .tab {
-                width: 80%;
-            }
-        }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
 
-        
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        60deg,
+        var(--secondary-color),
+        var(--secondary-color) 10px,
+        var(--primary-color) 10px,
+        var(--primary-color) 20px
+    );
+    animation: moveStripes 20s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes moveStripes {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    position: relative;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: var(--secondary-color);
+}
+
+.section, .section2 {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section2 h3, .section2 h2 {
+    color: #05a548;
+}
+
+.section p, .section li, .section2 p, .section2 li {
+    width: 60%;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+tr:hover {
+    background-color: var(--accent-color);
+}
+
+.info-box {
+    background-color: var(--background-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: scale(1.02);
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.tab:hover, .tab.active {
+    background-color: var(--secondary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2, .section, .section2, .info-box {
+        padding: 15px;
+    }
+
+    .section p, .section li, .section2 p, .section2 li, p {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .tab-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab {
+        width: 80%;
+        padding: 8px;
+    }
+}
+
     </style>
 </head>
 <script>

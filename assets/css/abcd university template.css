@@ -1678,10 +1678,7 @@ h2.h2{
   /* margin-top: 20%; */
 }
 
-.section2{
-width: 50%;
-/* margin-top: 10%; */
-}
+
 .section3{
   width: 50%;
   margin-left: 50%;
@@ -1700,9 +1697,9 @@ width: 50%;
   .column{
     margin-top: 0;
   }
-  .section2{
+  /* .section2{
     width: 100%;
-  }
+  } */
   .section3{
     width: 100%;
     margin-left: 0;
