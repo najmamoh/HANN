@@ -206,7 +206,21 @@
             display: block;
             animation: fadeIn 0.5s ease;
         }
-        
+        @media (max-width: 768px) {
+    .section p,
+    .section li,
+    .section2 p,
+    .section2 li {
+        width: 100%; /* Set to full width */
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+   h2,header{
+    padding-left: 50px;
+        padding-right: 50px;
+   }
+}
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -214,9 +228,9 @@
         
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 50px;
             }
-            
+           
             h1 {
                 font-size: 2em;
             }
