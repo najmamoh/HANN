@@ -1915,8 +1915,8 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.postgraduate-programs  li{
-  list-style-type:decimal;
+.postgraduate-programs li{
+  list-style-type: circle;
 }
 
 button:hover {
@@ -1939,4 +1939,10 @@ width: 100%;
   h2, h3 {
     font-size: 1.5em;
   }
+}
+
+
+
+.section2{
+  background: url(../images//main-slider-01.jpg) no-repeat center center/cover;
 }
