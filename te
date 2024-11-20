@@ -1,0 +1,1806 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+          rel="stylesheet"
+        />
+    
+        <title>HANUUN University</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="assets/css/abcd university template.css" />
+        <link rel="stylesheet" href="assets/css/owl.css" />
+        <link rel="stylesheet" href="assets/css/lightbox.css" />
+      </head>
+    <style>
+        :root {
+            --primary-color: #3a506b;
+            --secondary-color: #059a43;
+            --text-color: #0b132b;
+            --background-color: #062c4a;
+            --accent-color: #058f3e;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                60deg,
+                var(--secondary-color),
+                var(--secondary-color) 10px,
+                var(--primary-color) 10px,
+                var(--primary-color) 20px
+            );
+            animation: moveStripes 20s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes moveStripes {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            position: relative;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        h2:hover {
+            color: var(--secondary-color);
+        }
+        
+        .section {
+            
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section2{
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section2 h3,h2{
+            color: #05a548;
+        }
+        .section p ,li{
+            width: 60%;
+        }
+        .section2 p ,li{
+            width: 60%;
+        }
+        ul li{
+            list-style-type:circle;
+
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+        
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            color: black;
+        }
+        
+        tr:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .info-box {
+            background-color: var( --background-color);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-box:hover {
+            transform: scale(1.02);
+        }
+        
+        .tab-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+        
+        .tab:hover, .tab.active {
+            background-color: var(--secondary-color);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            table, th, td {
+                font-size: 14px;
+            }
+            
+            .tab-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab {
+                width: 80%;
+            }
+        }
+
+
+        
+    </style>
+</head>
+<script>
+     const products = [
+           { id: 1,  type: "Pipes" },
+           { id: 2,  type: "Pipes"},
+           { id: 3,  type: "Pipes"},
+           { id: 4,  type: "Pipes" },
+
+           { id: 5,  type: "Pipes" },
+           { id: 6,  type: "Pipes"},
+           { id: 7,  type: "Pipes"},
+           { id: 8 , type: "Pipes" },
+           { id: 9 , type: "Pipes" },
+           { id: 10 , type: "Pipes" },
+
+]
+           
+</script>
+<body>
+    
+    <header>
+        <h1>Hanuun University Postgraduate Programs</h1>
+    </header>
+    
+    <div class="container">
+        <!-- <div class="tab-container">            <button class="tab" onclick="openTab(event, 'counseling-psychology')">Counseling Psychology</button>
+            <button class="tab" onclick="openTab(event, 'peace-conflict-studies')">Peace & Conflict Studies</button>
+            <button class="tab" onclick="openTab(event, 'child-protection')">Child Protection</button>
+            <button class="tab" onclick="openTab(event, 'english-writing')">English Writing Skills</button>
+           
+                       <button class="tab" onclick="openTab(event, 'grant-proposal')">Grant Proposal Writing</button>
+ <button class="tab" onclick="openTab(event, 'digital-journalism')">Digital Journalism</button>
+            <button class="tab" onclick="openTab(event, 'social-behavioural-change')">Social & Behavioural Change</button>
+            <button class="tab" onclick="openTab(event, 'university-admin')">University Administration</button>
+            <button class="tab" onclick="openTab(event, 'grant-proposal')">Grant Proposal Writing</button>
+
+            <button class="tab" onclick="openTab(event, 'research-methodology')">Research Methodology</button>
+        </div> -->
+
+        <div id="general-psychology" class="tab-content active "type="general-psychology">
+            <section class="section ">
+                <div class="section2">
+                <h2>Postgraduate Diploma in General Psychology</h2>
+                <p>Psychology is a broad and dynamic field that provides essential insights into human behavior, thought processes, and emotions. The Postgraduate Diploma in General Psychology at Hanuun University offers a comprehensive foundation in psychological principles and practices, preparing students for advanced studies or careers in various sectors. This programme emphasizes the scientific methods of psychology, exploring various theories, research methodologies, and applications in real-world settings. Students will develop critical thinking skills, ethical research practices, and a deep understanding of human behavior, equipping them to contribute effectively to their chosen fields.</p>
+                
+                <h3>Programme Justification</h3>
+                <p>The need for well-trained psychologists in Somaliland and worldwide is increasing. Understanding human behavior, mental processes, and emotional well-being is crucial for various sectors, including healthcare, education, business, and government. This programme aims to produce graduates with the skills and knowledge to address complex psychological issues, conduct meaningful research, and apply psychological principles to improve individual and societal well-being. Graduates will be equipped to conduct research, analyze data, and present findings that can inform policies and practices across diverse contexts.</p>
+                
+                <h3>Programme Objectives</h3>
+                <ul>
+                    <li>To provide comprehensive knowledge and understanding of psychological principles, theories, and practices.</li>
+                    <li>To develop skills in qualitative and quantitative research methods, enabling students to conduct and critically evaluate psychological research.</li>
+                    <li>To prepare graduates for advanced studies in psychology or related fields and for professional roles requiring psychological expertise.</li>
+                </ul>
+                </div>
+                <h3>Programme Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Semester</th>
+                            <th>Course Code</th>
+                            <th>Course Title</th>
+                            <th>Credit Hour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="8">I</td>
+                            <td rowspan="4">SEM I</td>
+                            <td>PSYC—111</td>
+                            <td>Introduction to General Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>PSYC—112</td>
+                            <td>Personality Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>PSYC—113</td>
+                            <td>Developmental Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>PSYC—114</td>
+                            <td>Research Methodology in Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">SEM II</td>
+                            <td>PSYC—121</td>
+                            <td>Counseling Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>PSYC—122</td>
+                            <td>Social Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>PSYC—123</td>
+                            <td>Islamic Psychology</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>PSYC—124</td>
+                            <td>Projects and Self-reflection Seminars</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="info-box">
+                    <h3>More Information</h3>
+                    <p><strong>Duration:</strong> One Year with Two Semesters</p>
+                    <p><strong>Teachers Criteria:</strong> All Teachers are PhD or Above</p>
+                    <p><strong>Tuition Fee:</strong> 280 $ Per Semester</p>
+                    <p><strong>Eligible:</strong> Minimum Bachelor Degree Holder</p>
+                    <p><strong>After completion:</strong> You will be eligible to study any master program in psychology like Counselling, Clinical Psychology, and so on.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Add similar structures for other programs -->
+
+        <div id="research-methodology" class="tab-content " type="research-methodology">
+            <section class="section">
+                <div class="section2">
+
+                <h2>Postgraduate Diploma in Research Methodology
+                </h2>
+                <h3>Introduction</h3>
+                <p>Effective growth and development in all fields is highly dependent on advances in Science and Technology, which are generally sustained through research. The quality of development depends on the quality of research output, which in turn relies on the procedures and processes involved in the research. The impact of research, on the other hand, relies on the quality of the data obtained through an ethical process and effectively analyzed to provide reliable information. Hanuun University is aware that Somaliland and the region at large do not have adequate numbers of people who are well trained in the art and science of research, which has been a major constraint to using research as a tool for growth and development. This course aims to build research capacity in the region by producing professionals in various fields who have the ability and know-how to support pure science, agricultural, natural resource management, and social sciences research throughout the region and beyond. The program provides a strong foundation in research conceptualization, design, data collection, data management, statistical analysis, and the proposal and reporting of research. It is designed to produce specialists in research methods capable of working across the social, economic, and biophysical sciences to enhance the effectiveness of modern integrative research..</p>
+                
+                <h3>Programme Justification</h3>
+                <p>The need for Somaliland to have a critical mass of individuals with a thorough grounding in research, equipped with the tools for collecting and analysing statistical data, cannot be overemphasized. Currently, such individuals are not available in Somaliland, and researchers are in high demand worldwide. Organizations and governments alike seek understanding of facts related to current issues or proposed changes that may affect them. This course aims to deliver highly transferrable and much sought-after research skills with a 'hands-on' approach, equipping students with the skills to find information and solutions to pressing questions of any nature. Graduates will have the ability and skills to prepare, carry out, analyze, and present research findings that can impact the intended audience. This course aims to produce individuals with a vast theoretical and conceptual understanding of a wide range of research methods, as well as the skills to design, conduct, analyze, and present research findings ethically.</p>
+                
+                <h3>Programme Objectives</h3>
+                <ul>
+                    <li>To enhance understanding, appreciation, and practice of qualitative and quantitative research methods and application of data collection and analyses across disciplines.</li>
+                    <li>o produce graduates with strong philosophical foundations of research and practical skills to enable them to conduct and report research and critically read research reports.</li>
+                    <li>To develop future scientists with a thorough grounding in research, equipped with tools for collecting and analyzing statistical data.</li>
+                </ul>
+                </div>
+                <h3>Programme Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Semester</th>
+                            <th>Course Code</th>
+                            <th>Course Title</th>
+                            <th>Credit Hour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="6" class="year">I</td>
+                            <td rowspan="4" class="semester">SEM I</td>
+                            <td>RM—111</td>
+                            <td>Research Conceptualization</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>RM—112</td>
+                            <td>Qualitative Research Design I</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>RM—113</td>
+                            <td>Quantitative Research Design I</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>RM—114</td>
+                            <td>Academic Writing Skills</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" class="semester">SEM II</td>
+                            <td>RM—121</td>
+                            <td>Qualitative Research Design II</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>RM—122</td>
+                            <td>Quantitative Research Design II</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="total">Program Total</td>
+                            <td>21</td>
+                        </tr>
+        
+                </table>
+                <div class="info-box">
+                    <h3>More Information</h3>
+                    <p><strong>Duration:</strong> One Year with Two Semesters</p>
+                    <p><strong>Teachers Criteria:</strong> All Teachers are PhD or Above</p>
+                    <p><strong>Tuition Fee:</strong> 280 $ Per Semester</p>
+                    <p><strong>Eligible:</strong> Minimum Bachelor Degree Holder</p>
+                    <p><strong>After completion:</strong> You will be eligible to study any master program in psychology like Counselling, Clinical Psychology, and so on.</p>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div id="social-behavioural-change" class="tab-content " type="social-behavioural-change">
+            <section class="section">
+                <div class="section2">
+
+                <h2>Postgraduate Diploma in Social and Behavioural Change
+
+                </h2>
+                <h3>Introduction</h3>
+                <p>In an increasingly interconnected world, understanding the dynamics of human behavior and the factors that influence social change is more critical than ever. The Diploma in Social and Behavioral Change equips students with the knowledge and skills necessary to address pressing societal issues through innovative approaches and evidence-based strategies. This program focuses on the interplay between individual behaviors, community practices, and larger social systems, emphasizing the importance of cultural context and ethical considerations.
+                    Students will explore a range of topics, including health promotion, environmental sustainability, gender equality, and community development. By combining theoretical frameworks with practical applications, the diploma prepares graduates to effectively design, implement, and evaluate interventions that foster positive change. Participants will also develop competencies in communication, research methods, and project management, essential for working in diverse settings such as non-profit organizations, government agencies, and private sectors.
+                    Through this diploma, students will become change agents, capable of influencing behaviors and advocating for social justice, ultimately contributing to the creation of healthier, more equitable communities.</p>
+                
+                <h3>Programme Justification</h3>
+                <p>Somalia/Somaliland face numerous challenges rooted in social issues, which contribute significantly to ongoing instability and hinder development. Key problems include clan rivalries, gender inequality, limited access to education, entrenched cultural norms, lack of trust in institutions, economic disparities, health crises, and widespread displacement. These interconnected issues profoundly impact the lives of Somalis, perpetuating cycles of poverty and conflict.
+                    To address these challenges, there is a critical need for social and behavioral change (SBC) within Somali society. SBC is vital in Somalia/Somaliland, particularly in light of pressing health concerns, such as high maternal and child mortality rates and the prevalence of infectious diseases. SBC initiatives can effectively promote better hygiene practices, increase vaccination rates, and improve nutrition, leading to significant enhancements in public health outcomes.
+                    Furthermore, tailoring SBC programs to local cultural contexts is essential for fostering community acceptance and participation. By engaging with communities in ways that resonate with their values and beliefs, SBC can create a sense of ownership and commitment to positive change. Empowering individuals—especially women and youth—through education and awareness enables them to make informed decisions and advocate for their rights, ultimately contributing to more equitable and resilient communities.
+                    Addressing harmful gender norms is another crucial aspect of SBC. In Somalia, where traditional practices often limit women's roles, promoting gender equality through SBC can help dismantle these barriers. By encouraging discussions around gender roles and empowering women, SBC can enhance community resilience and support social stability.</p>
+                
+                <h3>Programme Objectives</h3>
+                <p>The general objectives of a Diploma in Social and Behavioral Change typically encompass a broad range of goals aimed at fostering an understanding of human behavior and effective strategies for driving positive change. Here are some key general objectives:</p>
+                <ul>
+                    <li> <strong>  Understanding Behavioral Theories:</strong> To provide students with a foundational understanding of theories related to social and behavioral change, enabling them to analyze and address complex social issues effectively.</li>
+                    <li><strong> Development:</strong> To equip students with practical skills in communication, facilitation, and advocacy, empowering them to implement change initiatives in communities.</li>
+                    <li> <strong> Research and Data Analysis:</strong> To teach students how to collect, analyze, and interpret data related to social behaviors, allowing them to evaluate the impact of change strategies.</li>
+                    <li> <strong> Cultural Sensitivity: </strong> To promote awareness of cultural dynamics and social contexts that influence behavior, preparing students to design interventions that are culturally appropriate and effective.</li>
+                    <li> <strong> interdisciplinary Collaboration:</strong>  To encourage collaboration across various sectors, including health, education, and community development, fostering a holistic approach to social change</li>
+                    <li> <strong> Ethical Considerations:</strong>  To instill a strong understanding of ethical principles in social and behavioral change work, ensuring that students advocate for and implement change with integrity and respect for communities.</li>
+
+                </ul>
+                </div>
+                <h3>Programme Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Course Code</th>
+                            <th>Course Title</th>
+                            <th>Credit Hour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">Semester One (3 Months)</td>
+                            <td>SBC 511</td>
+                            <td>Social and Behavioral Change: An Interdisciplinary Approach</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>SBC 512</td>
+                            <td>Social and Behavioral Change Communication (SBCC)</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>SBC 513</td>
+                            <td>Community Engagement and Advocacy</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>SBC 514</td>
+                            <td>Research Methods in Social & Behavioral Change</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="total">Total</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Semester Two (3 Months)</td>
+                            <td>SBC 515</td>
+                            <td>Sustaining Behavior Change</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>SBC 516</td>
+                            <td>Changing Behavior: Intervention Development and Evaluation</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>SBC 517</td>
+                            <td>Seminar on Contemporary Social and Behavioral Issues</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="total">Total</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="total">Total Credit Hour of the Program</td>
+                            <td>21</td>
+                        </tr>
+        
+                </table>
+                <div class="info-box">
+                    <h3>More Information</h3>
+                    <p><strong>Duration:</strong> Six Months with Two Semesters</p>
+                    <p><strong>Teachers Criteria:</strong> All Teachers are PhD or Above</p>
+                    <p><strong>Tuition Fee:</strong> 175 Dollar Each Semester</p>
+                    <p><strong>Eligible:</strong> Minimum Bachelor Degree Holder</p>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div id="digital-journalism" class="tab-content " type="digital-journalism">
+            <section class="section">
+                <div class="section2">
+
+                <h2>Postgraduate Diploma in Social and Behavioural Change
+
+                </h2>
+                <h3>Introduction</h3>
+                <p>
+                    The Postgraduate Certificate in Digital Journalism and Mass Communication is designed for aspiring media professionals seeking to excel in the dynamic digital landscape. This program equips students with essential skills in multimedia storytelling, digital content creation, and audience engagement. Through a blend of theoretical knowledge and hands-on experience, participants will explore the latest trends and technologies shaping the media industry. With a focus on ethical practices and innovative strategies, graduates will be prepared for diverse roles in journalism, social media, and communication. This certificate offers a pathway to thrive in an ever-evolving digital world.
+                </p>
+                
+                <h3>Programme Justification</h3>
+               
+                
+                <h3>Programme Objectives</h3>
+                <p>The general objectives of a Diploma in Social and Behavioral Change typically encompass a broad range of goals aimed at fostering an understanding of human behavior and effective strategies for driving positive change. Here are some key general objectives:</p>
+                <ul>
+                    <li> <strong>  Understanding Communication Fundamentals:</strong>  Equip students with a comprehensive understanding of communication theories, types, processes, and barriers, laying the foundation for effective interpersonal and mass communication.</li>
+                    <li><strong> Explore Mass Communication's Impact:</strong> Analyze the role of mass media in society, including its influence on public opinion, culture, and social change, highlighting its significance in contemporary life.</li>
+                    <li> <strong> Master Digital Journalism Skills:</strong>  Develop competencies in digital journalism through the exploration of digital storytelling techniques, multimedia tools, and social media engagement strategies, preparing students for the evolving media landscape.</li>
+                    <li> <strong> Navigate Ethical and Legal Frameworks: </strong>  Instill a strong understanding of ethical considerations and legal issues in digital journalism, ensuring responsible reporting and adherence to professional standards.</li>
+                    <li> <strong> Practical Application and Collaboration:</strong>   Encourage practical application of skills through projects, interviews, and press conferences, culminating in a final project that showcases students' ability to produce and present engaging journalistic content.</li>
+
+                </ul>
+                </div>
+                <h3>Programme Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Program Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Introduction to Communication.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Types of Communication</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Process of Communication</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Barriers in Communication?</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Introduction to Mass Communication.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>The Role of Mass Media/Mass Communication in Our Lives/Society.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>News</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Introduction to Digital Journalism</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Digital Storytelling Techniques</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Multimedia Journalism Tools and Platforms</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Social Media Reporting and Audience Engagement</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Ethics and Legal Issues in Digital Journalism</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Interview & Press Conference</td>
+                        </tr>
+        
+                </table>
+                <div class="info-box">
+                    <h3>More Information</h3>
+                    <p><strong>Duration:</strong> Six Months (190 Dollar whole program)                    </p>
+                    <p><strong>Teachers Criteria:</strong> All Teachers are PhD or Above</p>
+                    <p><strong>Eligible:</strong> Minimum Bachelor Degree Holder</p>
+                </div>
+            </section>
+        </div>
+
+
+
+
+        <div id="grant-proposal" class="tab-content" type="grant-proposal">
+            <section class="section">
+                <div class="section2">
+
+                <h2>Postgraduate Certificate in Grant Proposal Writing</h2>
+                
+                <h3>Introduction</h3>
+                <p>
+                    Training in grant proposal writing is vital for individuals and organizations aiming to secure funding effectively. A well-structured training program covers the essential elements of proposal writing, beginning with an overview of various types of grants and how to identify appropriate funding sources. Participants will learn to craft a clear and compelling statement of need that emphasizes the significance of their projects.
+                </p>
+                <p>
+                    The program focuses on effective proposal structuring, addressing key components such as the executive summary, project description, budget, and evaluation plan. Workshops provide hands-on activities, allowing participants to draft sections of a proposal, receive feedback, and enhance their writing skills.
+                </p>
+                <p>
+                    Additionally, the training highlights best practices in persuasive writing and customizing proposals for specific funders. Participants will learn to leverage data and personal stories to create a strong case and emotionally engage potential funders.
+                </p>
+                <p>
+                    Networking opportunities are another critical aspect of the training sessions, enabling attendees to connect with experienced grant writers and representatives from funding agencies. Overall, this training equips individuals with the necessary tools and confidence to navigate the grant writing process, significantly boosting their chances of securing funding to support their projects and initiatives.
+                </p>
+        
+                <h3>Program Justification</h3>
+                <p>
+                    Training in grant proposal writing is especially crucial for Somali organizations and individuals seeking to improve their funding opportunities and project sustainability. Given Somalia's unique challenges—such as political instability and limited resources—this training promotes local capacity building, equipping participants with the skills to effectively articulate community needs and design impactful projects.
+                </p>
+                <p>
+                    As access to international funding becomes increasingly competitive, this training empowers Somali organizations to craft compelling proposals that resonate with donors. This not only enhances the likelihood of securing funds but also ensures alignment with funders' priorities, increasing project relevance and effectiveness.
+                </p>
+                <p>
+                    Moreover, the training fosters sustainability by enabling organizations to secure ongoing support for vital programs, thus promoting self-reliance within communities. It encourages collaboration by connecting participants with one another and with funding agencies, creating networks that facilitate shared resources and knowledge.
+                </p>
+                <p>
+                    Well-trained grant writers enhance the credibility of Somali organizations, instilling trust among donors and stakeholders. By investing in grant proposal writing skills, Somalia can empower its local entities to address pressing issues, support development initiatives, and build a brighter future for its communities. This comprehensive approach ultimately strengthens the country’s resilience and self-sufficiency.
+                </p>
+                <h3>Program Objectives</h3>
+                <ul>
+                    <li><strong>Enhance Proposal Writing Skills:</strong> Equip participants to write clear, persuasive, and well-structured grant proposals that effectively communicate project goals and significance.</li>
+                    <li><strong>Understand Funding Sources:</strong> Familiarize participants with various funding sources and the grant application process, enabling them to identify suitable opportunities for their projects.</li>
+                    <li><strong>Develop Budgeting Expertise:</strong> Teach participants to create realistic and comprehensive budgets that align with their proposals, ensuring financial accountability and transparency.</li>
+                    <li><strong>Articulate a Compelling Statement of Need:</strong> Enable participants to effectively convey the need for their projects, utilizing data and narratives to demonstrate the importance and urgency of their initiatives.</li>
+                    <li><strong>Learn Evaluation Techniques:</strong> Introduce participants to evaluation methods that measure project outcomes, equipping them to include robust evaluation plans in their proposals to enhance credibility and impact.</li>
+                </ul>
+                </div>
+
+                <h3>Program Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Program Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Writing Skills</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Basic Grammar</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sentence and Paragraph Writing</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Essay Writing</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Email Writing</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Research Proposal Writing</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Research Article Writing</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Understanding Donors and Their Priorities</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Literature Review and Gap Analysis</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Developing a Conceptual Framework</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Budgeting and Financial Planning</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Reviewing and Editing</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Submission and Follow-Up</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Case Studies</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Ethical Considerations</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Final Project</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <div class="info-box">
+                    <h3>More Information</h3>
+                    <p><strong>Duration:</strong> Six Months</p>
+                    <p><strong>Teachers:</strong> All teachers hold a PhD or higher</p>
+                    <p><strong>Tuition Fee:</strong> Total fee for the program is 350 Dollars</p>
+                    <p><strong>Eligibility:</strong> Minimum Bachelor’s Degree Holder</p>
+                </div>
+            </section>
+        </div>
+        
+
+
+        <div id="english-writing" class="tab-content" type="english-writing">
+            <section class="section">
+                <div class="section2">
+        
+                    <h2>Postgraduate Certificate in English Writing Skills</h2>
+        
+                    <h3>Introduction</h3>
+                    <p>
+                        The Postgraduate Certificate in English Writing Skills is designed for individuals seeking to enhance their writing proficiency across various contexts, whether academic, professional, or creative. This program aims to equip participants with advanced writing techniques, critical thinking skills, and the ability to articulate ideas clearly and effectively.
+                    </p>
+                    <p>
+                        Through a comprehensive curriculum, students will engage with diverse writing styles, including research papers, reports, proposals, and creative pieces. The program emphasizes the importance of structure, coherence, and audience awareness in writing, fostering skills that are essential for success in both academic and professional environments.
+                    </p>
+                    <p>
+                        Participants will also explore elements of grammar, style, and editing, enabling them to produce polished, error-free work. Workshops and peer reviews will encourage collaboration and constructive feedback, helping students refine their writing processes.
+                    </p>
+                    <p>
+                        Additionally, the certificate program focuses on developing research skills, including how to source and integrate information effectively. By the end of the course, participants will be well-prepared to tackle writing challenges confidently and produce high-quality written materials that meet the demands of various fields. This program is ideal for those looking to advance their careers, enhance their academic performance, or pursue personal writing projects.
+                    </p>
+        
+                    <h3>Justification</h3>
+                    <p>
+                        The Postgraduate Certificate in English Writing Skills is vital for individuals aiming to enhance their communication abilities in academic and professional contexts. Strong writing skills are essential for articulating ideas clearly and persuasively, making this certificate a valuable asset for career advancement. Employers often prioritize candidates who can convey information effectively, and this program equips participants with the necessary skills to stand out in the competitive job market.
+                    </p>
+                    <p>
+                        Moreover, the certificate enhances academic success by preparing students to produce high-quality research papers, theses, and reports that meet rigorous academic standards. Participants learn to structure their writing logically, integrate sources effectively, and craft compelling arguments.
+                    </p>
+                    <p>
+                        The curriculum also fosters critical thinking, enabling individuals to analyze information and develop well-supported conclusions. Through collaborative workshops and peer feedback, students not only refine their writing but also build networks that can lead to professional opportunities.
+                    </p>
+                    <p>
+                        Additionally, the program encourages personal growth by allowing individuals to explore various writing styles, including creative writing, which can boost confidence and self-expression. Overall, the Postgraduate Certificate in English Writing Skills provides essential tools for effective communication, academic achievement, and professional development, making it an invaluable investment in one's future.
+                    </p>
+        
+                    <h3>Program Objectives</h3>
+                    <ul>
+                        <li><strong>Enhance Writing Proficiency:</strong> Equip participants with advanced writing techniques across various formats, including academic, professional, and creative writing, to improve overall writing quality and effectiveness.</li>
+                        <li><strong>Develop Critical Thinking:</strong> Foster critical thinking skills that enable students to analyze information, construct logical arguments, and support their ideas with evidence, enhancing the quality of their written work.</li>
+                        <li><strong>Master Research and Sourcing:</strong> Teach participants how to conduct thorough research, integrate sources appropriately, and adhere to academic integrity standards in their writing.</li>
+                        <li><strong>Improve Editing and Revision Skills:</strong> Provide training in self-editing and peer review processes to help students produce polished, error-free writing, emphasizing the importance of revision in the writing process.</li>
+                        <li><strong>Cultivate Audience Awareness:</strong> Instill an understanding of audience and purpose in writing, enabling participants to tailor their communication style and content to effectively engage different readerships.</li>
+                    </ul>
+        
+                </div>
+        
+                <h3>Program Structure</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Program Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Basic Grammar</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sentence and Paragraph Writing</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Vocabulary Building</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Story Writing</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Précis Writing</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Summary Writing</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Essay Writing</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Email Writing</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Application Writing</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Letter Writing</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Report Writing</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Research Proposal Writing</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Research Article Writing</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Research Thesis Writing</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <div class="info-box">
+                    <h3>More Information</h3>
+                    <p><strong>Duration:</strong> Six Months</p>
+                    <p><strong>Teachers:</strong> All Teachers are PhD or Above</p>
+                    <p><strong>Tuition Fee:</strong> Total fee of the program is 250 Dollars</p>
+                    <p><strong>Eligibility:</strong> Minimum Bachelor’s Degree Holder</p>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+        <div id="peace-conflict-studies" class="tab-content" type="peace-conflict-studies">
+            <section class="section">
+                <div class="section2">
+        
+                    <h1>Master of Psychology of Peace and Conflict Studies</h1>
+
+                    <h2>Introduction</h2>
+                    <p>
+                        Despite progress in democratization and human rights movements, conflicts between social groups continue to present significant challenges to peace and sustainable development. These conflicts, ranging from minor disagreements to large-scale confrontations, increasingly target civilians, leading to mass displacements and gross human rights violations.
+                    </p>
+                    <p>
+                        In contemporary times, scholars have observed a shift from wars between nations to intrastate conflicts and asymmetrical warfare, including terrorism. In many countries, conflicts between social groups serve as prime examples of this change, posing threats to civilian populations. Today, conflicts are often rooted not in ideological differences, but in issues of ethnic identity and perceptions of resource distribution. This underscores the growing importance of social psychological understanding of group identity and intergroup relations for conflict resolution and sustainable peace.
+                    </p>
+                    <p>
+                        Since human behavior is integral to the dynamics of conflict, psychological factors such as beliefs, attitudes, emotions, and intentions play a critical role. Individuals make decisions to engage in or resolve conflicts based on psychological processes, both learned over time and shaped by the conflict itself. Therefore, resolving conflicts and building sustainable peace must first address the human mind. Understanding the thoughts, feelings, and behaviors underlying conflict is essential for its resolution and reconciliation.
+                    </p>
+                    <p>
+                        Psychologists have made significant contributions to understanding the psychosocial roots of mass violence, including ethnic conflicts, terrorism, and genocide. Peace psychology, a specialization within psychology, has developed to focus on theories and practices that prevent violence, mitigate its effects on society, and promote peace. As experts have indicated, social psychology provides the core knowledge necessary to understand conflict dynamics and peace-making processes. Over the past decades, social psychological conflict management has emerged as an important supplement to traditional diplomatic initiatives, especially in identity-based conflicts that are resistant to official peacemaking efforts.
+                    </p>
+                
+                    <h2>Program Objectives</h2>
+                    <ul>
+                        <li>Capable of understanding intergroup stereotype, prejudice, and discrimination.</li>
+                        <li>Can investigate the formation, escalation, and psychological causes of intergroup violence and conflict.</li>
+                        <li>Skilled in evaluating, synthesizing, resolving, and reducing intergroup violence and conflicts in various areas.</li>
+                        <li>Competent in working towards peacebuilding and bringing cooperation among people from different ethnic and religious groups.</li>
+                        <li>Capable of translating social psychological theory and research towards policy and application.</li>
+                        <li>Able to teach some psychology courses at the undergraduate level.</li>
+                    </ul>
+                
+                    <h2>Program Structure</h2>
+                
+                    <h3>Year 1 - Semester I</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Course Code</th>
+                                <th>Course Title</th>
+                                <th>Credit Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PPC 511</td>
+                                <td>General Psychology</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PPC 512</td>
+                                <td>Personality Psychology</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PPC 513</td>
+                                <td>Academic Writing Skills</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PPC 514</td>
+                                <td>Applied Sociology</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PPC 515</td>
+                                <td>Islamic Psychology</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Total:</strong> 15 Credits</p>
+                
+                    <h3>Year 1 - Semester II</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Course Code</th>
+                                <th>Course Title</th>
+                                <th>Credit Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PPC 521</td>
+                                <td>Social Psychology</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PPC 522</td>
+                                <td>Research Methodology: Proposal Writing</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PPC 523</td>
+                                <td>Political Psychology</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PPC 524</td>
+                                <td>Psychology of Stereotype, Prejudice, and Discrimination</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Total:</strong> 15 Credits</p>
+                
+                    <h3>Year 2 - Semester I</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Course Code</th>
+                                <th>Course Title</th>
+                                <th>Credit Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PPC 611</td>
+                                <td>Social Identity and Intergroup Relations</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PPC 612</td>
+                                <td>Multicultural Psychology and Building Culture of Peace</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PPC 613</td>
+                                <td>The Psychology of Peace and Conflict Management</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PPC 614</td>
+                                <td>Research Methodology: Data Collection and Analysis</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PPC 615</td>
+                                <td>Practicum</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Total:</strong> 15 Credits</p>
+                
+                    <h3>Year 2 - Semester II</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Course Code</th>
+                                <th>Course Title</th>
+                                <th>Credit Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PPC 621</td>
+                                <td>Human Rights and Criminal Justice</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PPC 622</td>
+                                <td>Violence, Trauma and Psychosocial Support</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PPC 623</td>
+                                <td>Gender, Conflict, and Peace Education</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PPC 624</td>
+                                <td>Research Methodology: Writing Thesis</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PPC 625</td>
+                                <td>Practicum</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Total:</strong> 13 Credits</p>
+                
+                    
+                </div>
+                <div class="info-box">
+
+                <h2>More Information</h2>
+                        <p><strong>Duration:</strong> Two Years with Four Semesters</p>
+                      <p><strong>Teachers:</strong> All Teachers hold a PhD or above</p> 
+                       <p> <strong>Tuition Fee:</strong> 380 Dollars per Semester</p>
+                        <p><strong>Eligibility:</strong> Minimum Bachelor Degree Holder</p>
+                        </div>
+            </section>
+        </div>
+        
+        
+
+
+        <div id="child-protection" class="tab-content" type="child-protection">
+                <div class="section2">
+        
+                    <h1>Master of Child Protection and Development</h1>
+
+    <h2>Introduction</h2>
+    <p>
+        The Master of Child Protection and Development is a specialized graduate program designed to equip professionals with the knowledge and skills necessary to address the complex issues surrounding child welfare and development. This program emphasizes a multidisciplinary approach, integrating theories and practices from social work, psychology, education, and public policy.
+    </p>
+    <p>
+        Students learn to identify and respond to various challenges that children face, including abuse, neglect, and socio-economic disparities. The curriculum typically covers essential topics such as child rights, trauma-informed care, and effective intervention strategies. Additionally, students engage in practical experiences through internships or fieldwork, allowing them to apply theoretical knowledge in real-world settings.
+    </p>
+
+    <h2>Program Justification</h2>
+    <p>
+        The Master of Child Protection and Development program is essential in Somali society, where children face significant challenges, including poverty, conflict, and social instability. With a high number of vulnerable children at risk of abuse, neglect, and exploitation, this program aims to equip professionals with the necessary skills to address these pressing issues effectively.
+    </p>
+    
+    <h2>Program Objectives</h2>
+    <ul>
+        <li>Produce competent social workers and instructors in child development and protection.</li>
+        <li>Equip students with knowledge and skills for providing effective intervention during emergencies and care services for young children.</li>
+        <li>Develop strategies for children's safeguard, protection, and wellbeing.</li>
+        <li>Equip students with managerial knowledge and skills for better management of child forensic practices and psychological aids.</li>
+        <li>Design strategies to access education for disadvantaged children.</li>
+        <li>Encourage students to appreciate diversity, including social background, economic status, and disabilities.</li>
+    </ul>
+
+    <h2>Program Structure</h2>
+
+    <h3>Year I - Semester I</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Credit Hours</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Introduction to General Psychology</td>
+                <td>CPD111</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Introduction to Applied Sociology</td>
+                <td>CPD112</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Child Development</td>
+                <td>CPD113</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Child Rights and Advocacy</td>
+                <td>CPD114</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Child Forensic Psychology</td>
+                <td>CPD115</td>
+                <td>2</td>
+                <td class="remark"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Total:</strong> 14 Credits</p>
+
+    <h3>Year I - Semester II</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Credit Hours</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Education of Children in Emergency Situations</td>
+                <td>CPD211</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Community-based Child Protection and Safeguarding</td>
+                <td>CPD212</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Child Trafficking and Migrant Children</td>
+                <td>CPD213</td>
+                <td>2</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Child Program Design and Evaluation</td>
+                <td>CPD214</td>
+                <td>2</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Research Methods: Proposal Writing</td>
+                <td>CPD215</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Total:</strong> 13 Credits</p>
+
+    <h3>Year II - Semester I</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Credit Hours</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Child Counselling & Psychosocial Support</td>
+                <td>CPD311</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Child Health and Nutrition in Emergency Situations</td>
+                <td>CPD312</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Practicum in Child Development & Protection</td>
+                <td>CPD313</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Thesis I: Data Collection and Analysis</td>
+                <td>CPD314</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Total:</strong> 12 Credits</p>
+
+    <h3>Year II - Semester II</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Credit Hours</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Practicum in Child Development & Protection</td>
+                <td>CPD411</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Thesis</td>
+                <td>CPD412</td>
+                <td>3</td>
+                <td class="remark"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Total:</strong> 6 Credits</p>
+
+    <h6>Total Credit Hours of the Program:</h6>
+    <p><strong>41 Credits</strong></p></div>
+                <div class="info-box">
+
+                <h2>More Information</h2>
+                        <p><strong>Duration:</strong> Two Years with Four Semesters</p>
+                      <p><strong>Teachers:</strong> All Teachers hold a PhD or above</p> 
+                       <p> <strong>Tuition Fee:</strong>  380 Dollar Each Semester</p>
+                        <p><strong>Eligibility:</strong> Minimum Bachelor Degree Holder</p>
+                        </div>
+            </section>
+        
+</div>
+            
+
+
+           
+
+            <div id="university-admin" class="tab-content" type="university-admin">
+                <div class="section2">
+        
+                    <h1>Postgraduate Diploma in University Administration and Leadership</h1>
+
+                    <h2>Introduction</h2>
+                    <p>
+                        The Postgraduate Diploma in University Administration and Leadership is an intensive eight-month program designed for current and aspiring leaders in the higher education sector. As the education landscape continuously evolves, the need for effective leadership and management in universities has become increasingly crucial. This program aims to equip participants with the knowledge, skills, and competencies necessary to lead at various levels of higher education institutions. By focusing on key areas such as leadership, organizational development, strategic planning, financial management, quality assurance, internationalization, student support, research, and academic writing, the program aims to build the capacity of higher education administrators to meet the challenges and opportunities of the 21st century.
+                    </p>
+            
+                    <h2>Program Justification</h2>
+                    <p>
+                        The Diploma in University Administration and Leadership is vital for Somali society, particularly as the country seeks to rebuild and strengthen its educational institutions. Given the rapid growth of higher education in the Somali region, there is an urgent need for skilled administrators and leaders who can effectively navigate the complexities of university governance.
+                    </p>
+                    <p>
+                        This program prepares graduates to address challenges such as resource allocation, academic quality assurance, and strategic planning. By equipping individuals with the necessary skills and knowledge, the diploma aims to foster effective leadership that enhances institutional performance and educational outcomes.
+                    </p>
+                    <p>
+                        Furthermore, the program emphasizes the importance of cultural and contextual understanding, preparing leaders to create inclusive environments that respect Somali traditions and values while promoting academic excellence. It also addresses the pressing need for gender equity in leadership roles, encouraging women to take on positions of influence in higher education.
+                    </p>
+                    <p>
+                        Ultimately, this diploma serves as a crucial step toward developing a robust educational system in the Somali region, empowering institutions to contribute to national development, economic growth, and social cohesion. By investing in capable university administration and leadership, the Somali region can cultivate a generation of educated leaders poised to tackle the country’s challenges.
+                    </p>
+            
+                    <h2>Program Objectives</h2>
+                    <ul>
+                        <li>To develop advanced leadership skills and competencies in higher education.</li>
+                        <li>To enhance understanding of contemporary teaching and learning practices in higher education.</li>
+                        <li>To foster expertise in organizational development, change management, and strategic planning within higher education institutions.</li>
+                        <li>To equip participants with the knowledge and skills to effectively manage the financial resources of higher education institutions.</li>
+                        <li>To promote a culture of quality enhancement and assurance in higher education.</li>
+                        <li>To develop a global perspective on higher education and facilitate internationalization efforts.</li>
+                        <li>To enhance understanding of student support systems and their role in student success.</li>
+                        <li>To strengthen research skills and promote academic writing and publication.</li>
+                    </ul>
+            
+                    <h2>Program Structure</h2>
+                    <h3>Credit Hour Summary</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Courses</th>
+                                <th>Course Code</th>
+                                <th>Cred. Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Leadership Theory and Practice in Higher Education</td>
+                                <td>PGDL 111</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Research Methodology</td>
+                                <td>PGDL 121</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Quality Enhancement and Assurance in Higher Education</td>
+                                <td>PGDL 131</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Student Support System in Higher Education</td>
+                                <td>PGDL 141</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="highlight">Total</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <h3>Semester Two (3 Months)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Courses</th>
+                                <th>Course Code</th>
+                                <th>Cred. Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td>Organizational Development and Change Management in Higher Education</td>
+                                <td>PGDL 112</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Financial Management in Higher Education</td>
+                                <td>PGDL 152</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Academic Writing and Publication</td>
+                                <td>PGDL 122</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Internationalization of Higher Education</td>
+                                <td>PGDL 162</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="highlight">Total</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <h3>Semester Three (2 Months)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Courses</th>
+                                <th>Course Code</th>
+                                <th>Cred. Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Research Project</td>
+                                <td>PGDL 123</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="highlight">Total Credit Hour of the Program</td>
+                                <td>23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <h3>Alternate Structure</h3>
+                    <h4>Semester One (3 Months)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Courses</th>
+                                <th>Course Code</th>
+                                <th>Cred. Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>University Administration and Leadership I</td>
+                                <td>SBC 511</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Research Methodology</td>
+                                <td>SBC 512</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>English Writing Skills</td>
+                                <td>SBC 513</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="highlight">Total</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <h4>Semester Two (3 Months)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Courses</th>
+                                <th>Course Code</th>
+                                <th>Cred. Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td>University Administration and Leadership II</td>
+                                <td>SBC 515</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Research Project</td>
+                                <td>SBC 516</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Academic Writing Skills</td>
+                                <td>SBC 517</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="highlight">Total</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                    <h4>Semester Three (Two Months)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Courses</th>
+                                <th>Cred. Hr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Practicum (University Administration and Leadership)</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="highlight">Total Credit Hour of the Program</td>
+                                <td>21</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="info-box">
+                        <h2>Program Details</h2>
+                    <p><span class="highlight">Duration:</span> Eight Months with Three Semesters</p>
+                    <p><span class="highlight">Teachers:</span> All Teachers are Associate Professor or Above</p>
+                    <p><span class="highlight">Tuition Fee:</span> 175 dollars per semester</p>
+                  <p><span class="highlight"></span> Eligible: A University Employers and those interesting to work in universities with minimum bachelor degree holder.</p>
+</div>
+            </section>
+        </div>
+        
+</div>
+
+
+            <div id="counseling-psychology" class="tab-content " type="counseling-psychology">
+                <div class="section2">
+        
+                        <h1>Master in Counseling Psychology</h1>
+                
+                        <h2>Introduction</h2>
+                        <p>
+                            The Master of Counselling Psychology program is designed to equip students with the knowledge and skills necessary for effective practice in various therapeutic settings. This graduate degree emphasizes a deep understanding of psychological theories, counseling techniques, and ethical considerations, enabling future professionals to support diverse populations in overcoming emotional, behavioral, and mental health challenges.
+                        </p>
+                        <p>
+                            Students engage in a comprehensive curriculum that covers core areas such as developmental psychology, cognitive-behavioral therapy, and psychodynamic approaches. Practical training is a key component, with opportunities for supervised clinical practice, allowing students to apply their learning in real-world contexts.
+                        </p>
+                        <p>
+                            Emphasizing cultural competence, the program prepares graduates to work sensitively and effectively with clients from varied backgrounds. In addition to individual counseling, students explore group therapy, crisis intervention, and community mental health, preparing them for a wide range of career paths in schools, healthcare facilities, and private practice.
+                        </p>
+                        <p>
+                            Overall, the Master of Counselling Psychology fosters not only the development of technical skills but also the cultivation of empathy and resilience, essential qualities for anyone aspiring to make a meaningful impact in the field of mental health.
+                        </p>
+                
+                        <h2>Program Justification</h2>
+                        <p>
+                            The justification for a Master of Counselling Psychology in Somali society is multifaceted, addressing the unique psychological and social challenges faced by individuals and communities.
+                        </p>
+                        <p>
+                            Firstly, the Somali region has experienced significant turmoil due to prolonged conflict, displacement, and societal changes, leading to widespread trauma and mental health issues. A specialized training program can equip professionals with the skills to provide culturally relevant therapeutic interventions, helping individuals navigate their experiences and promote healing.
+                        </p>
+                        <p>
+                            Secondly, the stigma surrounding mental health in Somali culture often prevents individuals from seeking help. By developing a strong foundation in counselling psychology, graduates can play a crucial role in raising awareness, normalizing mental health discussions, and reducing stigma within communities.
+                        </p>
+                        <p>
+                            Furthermore, as Somali society evolves, there is a growing need for mental health services in schools, workplaces, and community centers. Counselling psychologists can contribute to the development of preventive and intervention programs that address issues such as depression, anxiety, and substance abuse, fostering healthier communities.
+                        </p>
+                        <p>
+                            Lastly, the integration of traditional healing practices with modern psychological approaches can create holistic treatment options. A Master of Counselling Psychology can prepare professionals to respect and incorporate cultural beliefs into their practice, enhancing the effectiveness of mental health care in Somali society.
+                        </p>
+                
+                        <h2>Objectives of the Program</h2>
+                        <ul>
+                            <li><strong>Theoretical Understanding:</strong> To provide students with a comprehensive understanding of psychological theories and models relevant to counseling, enabling them to apply these frameworks in practice.</li>
+                            <li><strong>Clinical Skills Development:</strong> To equip students with essential counseling skills, including active listening, empathy, and therapeutic techniques, to effectively support clients in diverse settings.</li>
+                            <li><strong>Cultural Competence:</strong> To foster an awareness of cultural, social, and ethical factors that influence mental health, preparing students to work sensitively and effectively with clients from various backgrounds.</li>
+                            <li><strong>Research and Evidence-Based Practice:</strong> To instill the ability to critically evaluate research and apply evidence-based practices in counseling, promoting effective treatment strategies.</li>
+                            <li><strong>Professional Ethics:</strong> To educate students on ethical standards and legal considerations in counseling, ensuring they practice with integrity and responsibility.</li>
+                            <li><strong>Personal and Professional Growth:</strong> To encourage self-reflection and personal development, helping students understand their own biases and emotional responses while enhancing their professional identity as counselors.</li>
+                        </ul>
+                
+                        <h2>Program Structure</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Semester</th>
+                                    <th>Course Code</th>
+                                    <th>Course Title</th>
+                                    <th>Credit Hour</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5">I</td>
+                                    <td>SEM I</td>
+                                    <td>CPsy—111</td>
+                                    <td>Psychological Assessment</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM I</td>
+                                    <td>CPsy—112</td>
+                                    <td>Classifications of Adulthood Disorders</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM I</td>
+                                    <td>CPsy—113</td>
+                                    <td>Psychotherapies</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM I</td>
+                                    <td>CPsy—114</td>
+                                    <td>Clinical Placement Report</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align:right;">Semester Total</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5">I</td>
+                                    <td>SEM II</td>
+                                    <td>CPsy—121</td>
+                                    <td>Addiction and Psychological Trauma</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM II</td>
+                                    <td>CPsy—122</td>
+                                    <td>Therapy of Addiction and Psychological Trauma (special emphasis on Community Reinforcement Approach CRA and Narrative exposure Therapy NET)</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM II</td>
+                                    <td>CPsy—123</td>
+                                    <td>Clinical Placement Report</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM II</td>
+                                    <td>CPsy—124</td>
+                                    <td>Research Methodology and Research Proposal Development</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align:right;">Semester Total</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5">II</td>
+                                    <td>SEM III</td>
+                                    <td>CPsy—211</td>
+                                    <td>Child and Adolescent problems</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM III</td>
+                                    <td>CPsy—212</td>
+                                    <td>Adolescent psychotherapy (Didactic Approach)</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM III</td>
+                                    <td>CPsy—213</td>
+                                    <td>Clinical Placement Report</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM III</td>
+                                    <td>CPsy—214</td>
+                                    <td>Data Collection and Data Analysis</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align:right;">Semester Total</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4">II</td>
+                                    <td>SEM IV</td>
+                                    <td>CPsy—221</td>
+                                    <td>Educational and Child Counseling Psychology in School</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM IV</td>
+                                    <td>CPsy—222</td>
+                                    <td>Clinical Placement Report</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>SEM IV</td>
+                                    <td>CPsy—223</td>
+                                    <td>Thesis Write Up</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align:right;">Semester Total</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" style="text-align:right;"><strong>Total Credit Hour of the Program</strong></td>
+                                    <td><strong>45</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+              
+            </section>
+        
+</div></div>
+
+    </div> -->
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, products, tabLinks;
+            // products = document.getElementsByClassName("tab-content");
+            for (i = 0; i < products.length; i++) {
+                products[i].style.display = "none";
+            }
+            // tabLinks = document.getElementsByClassName("tab");
+            // for (i = 0; i < tabLinks.length; i++) {
+            //     tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            // }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
